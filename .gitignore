@@ -1,0 +1,9 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Reportes generados al auditar (no versionar salidas de ejemplo)
+CUMPLIMIENTO_LEY_21719.md
