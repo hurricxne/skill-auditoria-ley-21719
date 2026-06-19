@@ -63,6 +63,16 @@ gran escala. Asigna a cada ítem uno de los estados: ✅ Implementado, ⚠️ Pa
 
 ## D. Derechos de los titulares
 
+> **Plazos legales que el sistema debe poder cumplir (no son opcionales):**
+> - **Respuesta general** (acceso, rectificación, supresión, oposición,
+>   portabilidad): **30 días corridos** desde el ingreso, prorrogable **una vez**
+>   por otros **30 días corridos**.
+> - **Bloqueo temporal:** **2 días hábiles** para responder al requerimiento.
+>
+> Si el sistema gestiona solicitudes, el campo de vencimiento (`due_at`) debe
+> calcularse con estos plazos. Un flujo que no los contemple es un hallazgo,
+> aunque la funcionalidad exista.
+
 | ID | Ítem | Cómo verificar | Prioridad |
 |---|---|---|---|
 | D1 | Acceso: se puede exportar los datos de un titular | Buscar endpoint/flujo de exportación por persona | C |
@@ -170,10 +180,20 @@ gran escala. Asigna a cada ítem uno de los estados: ✅ Implementado, ⚠️ Pa
 
 ## O. Tratamientos de alto riesgo (IA, perfilamiento, CCTV, salud)
 
+> **IA externa = transferencia internacional.** Enviar datos personales reales a
+> un LLM o servicio de IA alojado fuera de Chile (OpenAI, Anthropic, Google,
+> etc., típicamente en EE.UU.) constituye una **transferencia internacional** y,
+> además, una **comunicación de datos a un tercero**. No basta con que "funcione":
+> requiere base lícita, contrato/DPA que prohíba el uso para fines propios y para
+> entrenamiento, y garantías de transferencia. Un hallazgo O2 debe cruzarse
+> siempre con N2, N3 y N5. La regla práctica del documento legal es **no enviar
+> datos personales reales, sensibles, laborales, médicos o financieros a IA
+> externa sin evaluación previa y autorización clara**.
+
 | ID | Ítem | Cómo verificar | Prioridad |
 |---|---|---|---|
 | O1 | Detectar decisiones automatizadas / scoring / perfilamiento | Buscar lógica que clasifique o decida sobre personas | A |
-| O2 | Detectar envío de datos personales reales a IA externa | Buscar llamadas a APIs de IA y qué datos se mandan | C |
+| O2 | Detectar envío de datos personales reales a IA externa | Buscar llamadas a APIs de IA y qué datos se mandan; si es un servicio fuera de Chile, tratarlo también como transferencia internacional (N3) y comunicación a tercero | C |
 | O3 | Revisión humana en decisiones con efectos relevantes | Verificar que la IA no decide sola | A |
 | O4 | Registro de decisiones automatizadas | Buscar log de decisiones (input, modelo, resultado) | M |
 | O5 | Evaluación de impacto para tratamientos de alto riesgo | Verificar existencia de DPIA (normalmente ❓) | A |

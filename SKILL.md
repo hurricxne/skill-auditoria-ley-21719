@@ -1,5 +1,6 @@
 ---
 name: auditoria-ley-21719
+version: 1.1
 description: >-
   Audita un proyecto/codebase contra la Ley N° 21.719 de Protección de Datos
   Personales de Chile y produce un reporte de cumplimiento priorizado. Úsalo
@@ -153,6 +154,10 @@ informe. Reglas:
   controlador `X`"), no una recomendación genérica.
 - Incluye el **inventario de datos** del Paso 1 y un **resumen ejecutivo** con
   el % aproximado de cumplimiento por categoría y los 3–5 riesgos más urgentes.
+- Incluye una sección de **controles ya implementados** (los ítems ✅) antes del
+  backlog. Un reporte que solo lista lo que falta desmoraliza y oculta lo que el
+  equipo hizo bien; resaltar lo correcto evita además que alguien "arregle" algo
+  que ya cumple. Sé concreto: cita el control y su evidencia.
 - Cierra con el recordatorio de que esto no reemplaza revisión legal formal.
 
 Guarda el reporte como `CUMPLIMIENTO_LEY_21719.md` en la raíz del proyecto

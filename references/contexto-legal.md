@@ -41,6 +41,27 @@ socioeconómicos según contexto.
 económico, exclusión o afectación fuerte, trátalo como **alto riesgo** aunque
 haya duda.
 
+## Datos de acceso público (siguen siendo datos personales)
+
+Que un dato sea de **acceso público** (perfil de LinkedIn, registro público,
+sitio web abierto, prensa) **no lo saca de la ley**: sigue siendo dato personal y
+el titular conserva sus derechos. Lo que cambia es que el tratamiento puede
+apoyarse en bases lícitas más amplias y algunas exigencias se atenúan, pero **no
+desaparecen**:
+
+- Sigue requiriendo **finalidad** y **base lícita** (a menudo interés legítimo),
+  y debe respetar **proporcionalidad/minimización**.
+- El titular mantiene **derechos** (acceso, rectificación, supresión, oposición).
+- **Recopilar datos públicos a gran escala** (scraping, enriquecimiento de
+  bases, perfilamiento) **sube el riesgo** y puede requerir evaluación de impacto.
+- Un dato público **sensible** (ej. afiliación política visible) sigue siendo
+  sensible.
+
+**Para la auditoría:** si el sistema ingiere datos de fuentes públicas, no los
+marques como "fuera de alcance"; clasifícalos como personales de **riesgo
+generalmente menor**, salvo que haya scraping masivo, perfilamiento o datos
+sensibles, donde el riesgo vuelve a ser alto.
+
 ## Bases lícitas (cada tratamiento necesita una)
 
 Contrato o medidas precontractuales · obligación legal · consentimiento ·
@@ -81,6 +102,17 @@ automatizadas con efectos relevantes, IA para evaluar personas.
   (hosting, soporte externo, email marketing, CRM, pasarela de pago, proveedor
   de IA, backups).
 - **Titular:** la persona natural dueña de los datos.
+
+**Designación formal de un responsable de privacidad.** La ley no se conforma con
+que "alguien se preocupe" de los datos: contempla la figura del **delegado de
+protección de datos** dentro de los modelos de prevención de infracciones y
+estándares de cumplimiento. Incluso cuando no se implemente de inmediato un
+modelo certificado, el responsable del tratamiento **debe poder demostrar quién**
+coordina el cumplimiento (inventario de tratamientos, solicitudes de titulares,
+incidentes, proveedores, política de privacidad, capacitación). Para la auditoría
+(ítem Q1), no basta con que exista un equipo de TI: debe haber una **persona
+designada explícitamente** como responsable de privacidad; su ausencia es un
+hallazgo, no un detalle administrativo.
 
 ## Fuentes oficiales
 

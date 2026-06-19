@@ -42,14 +42,14 @@ externa) se marca explícitamente como "requiere confirmación".
 ### Como skill personal (todos tus proyectos)
 
 ```bash
-git clone https://github.com/<tu-usuario>/skill-auditoria-ley-21719.git \
+git clone https://github.com/hurricxne/skill-auditoria-ley-21719.git \
   ~/.claude/skills/auditoria-ley-21719
 ```
 
 En Windows (PowerShell):
 
 ```powershell
-git clone https://github.com/<tu-usuario>/skill-auditoria-ley-21719.git `
+git clone https://github.com/hurricxne/skill-auditoria-ley-21719.git `
   "$env:USERPROFILE\.claude\skills\auditoria-ley-21719"
 ```
 

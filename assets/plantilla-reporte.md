@@ -91,7 +91,20 @@ para que el responsable los confirme:
 
 ---
 
-## 5. Backlog sugerido (orden de ejecución)
+## 5. Controles ya implementados (fortalezas)
+
+Lo que el proyecto **ya cumple** (ítems ✅). Resaltarlo da una lectura balanceada
+y evita retrabajo: deja claro qué **no** hay que tocar porque ya está conforme.
+
+| ID | Control implementado | Evidencia |
+|---|---|---|
+| {{G1}} | {{Contraseñas con hash robusto (bcrypt)}} | {{`app/Models/User.php` — cast `hashed`}} |
+| {{F-tenant}} | {{Aislamiento multi-tenant por global scope}} | {{`app/Shared/Scopes/TenantScope.php`}} |
+| | | |
+
+---
+
+## 6. Backlog sugerido (orden de ejecución)
 
 1. {{tarea}}
 2. {{tarea}}
@@ -99,7 +112,7 @@ para que el responsable los confirme:
 
 ---
 
-## 6. Nota final
+## 7. Nota final
 
 Este reporte refleja el estado del proyecto **a la fecha de auditoría** y según
 lo verificable en el repositorio. La ley exige poder **demostrar** el
